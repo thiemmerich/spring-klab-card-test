@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import br.com.emmerich.klab.model.Card;
 import br.com.emmerich.klab.model.Deck;
 
 @Service
@@ -29,6 +28,14 @@ public class DeckService {
 
 	public Deck drawOneCard(String deckId) {
 		String URL = DECK_URL + deckId + "/draw/?count=1";
+		LOG.info("URL: " + URL);
+		Deck deck = restTemplate.getForObject(URL, Deck.class);
+
+		return deck;
+	}
+
+	public Deck drawFiveCards(String deckId) {
+		String URL = DECK_URL + deckId + "/draw/?count=5";
 		LOG.info("URL: " + URL);
 		Deck deck = restTemplate.getForObject(URL, Deck.class);
 

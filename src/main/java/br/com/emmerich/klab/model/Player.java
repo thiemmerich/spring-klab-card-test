@@ -1,18 +1,12 @@
 package br.com.emmerich.klab.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class Player {
 	private String name;
-	private List<Card> playerDeck;
-
-	public Player() {
-		this.playerDeck = new ArrayList<>();
-	}
+	private Deck deck;
 
 	public String getName() {
 		return name;
@@ -22,29 +16,32 @@ public class Player {
 		this.name = name;
 	}
 
-	public List<Card> getPlayerDeck() {
-		return playerDeck;
+	public Deck getDeck() {
+		return deck;
 	}
 
-	public void setPlayerDeck(List<Card> playerDeck) {
-		this.playerDeck = playerDeck;
+	public void setDeck(Deck deck) {
+		this.deck = deck;
 	}
 
+	@JsonIgnore
 	public void addCardToDeck(Card card) {
-		if (this.playerDeck == null) {
-
-		}
-		this.playerDeck.add(card);
+		this.deck.getCards().add(card);
 	}
 
 	@JsonIgnore
 	public Integer deckSum() {
 		AtomicInteger sum = new AtomicInteger(0);
 
-		playerDeck.stream().forEach(card -> {
+		deck.getCards().stream().forEach(card -> {
 			sum.getAndAdd(card.getValueInteger());
 		});
 
 		return sum.get();
+	}
+
+	@Override
+	public String toString() {
+		return "Player Name: " + this.getName() + " Cards Sum: " + this.deckSum();
 	}
 }

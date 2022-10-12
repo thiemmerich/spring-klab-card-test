@@ -20,7 +20,6 @@ public class Deck {
 	}
 
 	public Deck(boolean success, String deckId, String shuffled, List<Card> cards, Integer remaining) {
-		super();
 		this.success = success;
 		this.deckId = deckId;
 		this.shuffled = shuffled;
@@ -70,6 +69,7 @@ public class Deck {
 
 	@Override
 	public String toString() {
-		return "Deck ID: " + this.getDeckId() + " Cards Remaining: " + this.getRemaining();
+		return "Deck ID: " + this.getDeckId() + " Cards Remaining: " + this.getRemaining() + " Cards: "
+				+ this.getCards().size();
 	}
 }

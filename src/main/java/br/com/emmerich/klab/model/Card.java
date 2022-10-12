@@ -7,6 +7,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Card {
 	private String code;
 	private String image;
+	
+	@JsonIgnore
 	private List<String> images;
 	private String value;
 	private String suit;
