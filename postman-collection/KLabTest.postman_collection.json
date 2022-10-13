@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "8de7620d-6fff-49ea-aff8-ff5cc2cbe292",
+		"name": "KLabTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "DeckApi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://deckofcardsapi.com/api/deck/ajamxgcxyv7r/draw/?count=1",
+					"protocol": "https",
+					"host": [
+						"deckofcardsapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"deck",
+						"ajamxgcxyv7r",
+						"draw",
+						""
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DrawOneCard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/card/ajamxgcxyv7r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"card",
+						"ajamxgcxyv7r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Deck",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/deck",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Player 1 Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Player 1\",\n    \"deck\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/deck/ajamxgcxyv7r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deck",
+						"ajamxgcxyv7r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Player 2 Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Player 2\",\n    \"deck\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/deck/ajamxgcxyv7r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deck",
+						"ajamxgcxyv7r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Player 3 Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Player 3\",\n    \"deck\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/deck/ajamxgcxyv7r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deck",
+						"ajamxgcxyv7r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Player 4 Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Player 4\",\n    \"deck\": {}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/deck/ajamxgcxyv7r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"deck",
+						"ajamxgcxyv7r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player Winner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"name\": \"Player 1\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"QC\",\n                \"image\": \"https://deckofcardsapi.com/static/img/QC.png\",\n                \"value\": \"QUEEN\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"QS\",\n                \"image\": \"https://deckofcardsapi.com/static/img/QS.png\",\n                \"value\": \"QUEEN\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"6S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/6S.png\",\n                \"value\": \"6\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"3S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/3S.png\",\n                \"value\": \"3\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"2S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/2S.png\",\n                \"value\": \"2\",\n                \"suit\": \"SPADES\"\n            }\n        ],\n        \"remaining\": 11,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/player/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"player",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1 Player Winner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"name\": \"Player 1\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"QC\",\n                \"image\": \"https://deckofcardsapi.com/static/img/QC.png\",\n                \"value\": \"QUEEN\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"QS\",\n                \"image\": \"https://deckofcardsapi.com/static/img/QS.png\",\n                \"value\": \"QUEEN\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"6S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/6S.png\",\n                \"value\": \"6\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"3S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/3S.png\",\n                \"value\": \"3\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"2S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/2S.png\",\n                \"value\": \"2\",\n                \"suit\": \"SPADES\"\n            }\n        ],\n        \"remaining\": 11,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n},\n{\n    \"name\": \"Player 2\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"4H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/4H.png\",\n                \"value\": \"4\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"5S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/5S.png\",\n                \"value\": \"5\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"9D\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9D.png\",\n                \"value\": \"9\",\n                \"suit\": \"DIAMONDS\"\n            },\n            {\n                \"code\": \"6H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/6H.png\",\n                \"value\": \"6\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"9S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9S.png\",\n                \"value\": \"9\",\n                \"suit\": \"SPADES\"\n            }\n        ],\n        \"remaining\": 6,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n},\n{\n    \"name\": \"Player 3\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"9H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9H.png\",\n                \"value\": \"9\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"0C\",\n                \"image\": \"https://deckofcardsapi.com/static/img/0C.png\",\n                \"value\": \"10\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"8S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/8S.png\",\n                \"value\": \"8\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"7C\",\n                \"image\": \"https://deckofcardsapi.com/static/img/7C.png\",\n                \"value\": \"7\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"JD\",\n                \"image\": \"https://deckofcardsapi.com/static/img/JD.png\",\n                \"value\": \"JACK\",\n                \"suit\": \"DIAMONDS\"\n            }\n        ],\n        \"remaining\": 1,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n},\n{\n    \"name\": \"Player 4\",\n    \"deck\": {\n        \"success\": false,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"4D\",\n                \"image\": \"https://deckofcardsapi.com/static/img/4D.png\",\n                \"value\": \"4\",\n                \"suit\": \"DIAMONDS\"\n            }\n        ],\n        \"remaining\": 0,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/player/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"player",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multi Player Winner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"name\": \"Player 1\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"QC\",\n                \"image\": \"https://deckofcardsapi.com/static/img/QC.png\",\n                \"value\": \"QUEEN\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"QS\",\n                \"image\": \"https://deckofcardsapi.com/static/img/QS.png\",\n                \"value\": \"QUEEN\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"6S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/6S.png\",\n                \"value\": \"6\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"3S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/3S.png\",\n                \"value\": \"3\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"2S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/2S.png\",\n                \"value\": \"2\",\n                \"suit\": \"SPADES\"\n            }\n        ],\n        \"remaining\": 11,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n},\n{\n    \"name\": \"Player 2\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"4H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/4H.png\",\n                \"value\": \"4\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"5S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/5S.png\",\n                \"value\": \"5\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"9D\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9D.png\",\n                \"value\": \"9\",\n                \"suit\": \"DIAMONDS\"\n            },\n            {\n                \"code\": \"6H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/6H.png\",\n                \"value\": \"6\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"9S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9S.png\",\n                \"value\": \"9\",\n                \"suit\": \"SPADES\"\n            }\n        ],\n        \"remaining\": 6,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n},\n{\n    \"name\": \"Player 3\",\n    \"deck\": {\n        \"success\": true,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"9H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9H.png\",\n                \"value\": \"9\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"0C\",\n                \"image\": \"https://deckofcardsapi.com/static/img/0C.png\",\n                \"value\": \"10\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"8S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/8S.png\",\n                \"value\": \"8\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"7C\",\n                \"image\": \"https://deckofcardsapi.com/static/img/7C.png\",\n                \"value\": \"7\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"JD\",\n                \"image\": \"https://deckofcardsapi.com/static/img/JD.png\",\n                \"value\": \"JACK\",\n                \"suit\": \"DIAMONDS\"\n            }\n        ],\n        \"remaining\": 1,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n},\n{\n    \"name\": \"Player 4\",\n    \"deck\": {\n        \"success\": false,\n        \"shuffled\": null,\n        \"cards\": [\n            {\n                \"code\": \"9H\",\n                \"image\": \"https://deckofcardsapi.com/static/img/9H.png\",\n                \"value\": \"9\",\n                \"suit\": \"HEARTS\"\n            },\n            {\n                \"code\": \"0C\",\n                \"image\": \"https://deckofcardsapi.com/static/img/0C.png\",\n                \"value\": \"10\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"8S\",\n                \"image\": \"https://deckofcardsapi.com/static/img/8S.png\",\n                \"value\": \"8\",\n                \"suit\": \"SPADES\"\n            },\n            {\n                \"code\": \"7C\",\n                \"image\": \"https://deckofcardsapi.com/static/img/7C.png\",\n                \"value\": \"7\",\n                \"suit\": \"CLUBS\"\n            },\n            {\n                \"code\": \"JD\",\n                \"image\": \"https://deckofcardsapi.com/static/img/JD.png\",\n                \"value\": \"JACK\",\n                \"suit\": \"DIAMONDS\"\n            }\n        ],\n        \"remaining\": 0,\n        \"deck_id\": \"ajamxgcxyv7r\"\n    }\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/player/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"player",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
