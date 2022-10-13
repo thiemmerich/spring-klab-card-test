@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,11 +32,11 @@ public class DeckController {
 	}
 
 	@PostMapping("/{deck_id}")
-	public Player getPlayerDeck(@PathVariable("deck_id") String deckId, Player player) {
+	public Player getPlayerDeck(@PathVariable("deck_id") String deckId, @RequestBody Player player) {
 		Deck fiveCardsDeck = deckService.drawFiveCards(deckId);
 
-		LOG.info("Player: " + player.toString());
-		LOG.info("Five Cards Deck: " + fiveCardsDeck.toString());
+		//LOG.info("Player: " + player.toString());
+		//LOG.info("Five Cards Deck: " + fiveCardsDeck.toString());
 		
 		player.setDeck(fiveCardsDeck);
 

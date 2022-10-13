@@ -3,9 +3,11 @@ package br.com.emmerich.klab.controller;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.emmerich.klab.model.MatchResult;
 import br.com.emmerich.klab.model.Player;
 import br.com.emmerich.klab.service.PlayerService;
 
@@ -19,7 +21,7 @@ public class PlayerController {
 	}
 
 	@PostMapping("/winner")
-	public List<Player> getWinner(List<Player> players) {
+	public MatchResult getWinner(@RequestBody List<Player> players) {
 		return playerService.getWinnerPlayer(players);
 	}
 }

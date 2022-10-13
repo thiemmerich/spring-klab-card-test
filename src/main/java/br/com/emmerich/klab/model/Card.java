@@ -65,19 +65,19 @@ public class Card {
 	}
 
 	@JsonIgnore
-	public Integer getValueInteger() {
+	public Integer getIntegerValue() {
 		String realValue = "";
 		switch (value) {
-		case "A":
+		case "ACE":
 			realValue = "1";
 			break;
-		case "J":
+		case "JACK":
 			realValue = "11";
 			break;
-		case "K":
+		case "KING":
 			realValue = "13";
 			break;
-		case "Q":
+		case "QUEEN":
 			realValue = "12";
 			break;
 		default:

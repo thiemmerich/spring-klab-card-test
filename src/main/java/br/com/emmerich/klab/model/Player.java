@@ -32,11 +32,11 @@ public class Player {
 	@JsonIgnore
 	public Integer deckSum() {
 		AtomicInteger sum = new AtomicInteger(0);
-
-		deck.getCards().stream().forEach(card -> {
-			sum.getAndAdd(card.getValueInteger());
-		});
-
+		if (this.deck != null) {
+			deck.getCards().stream().forEach(card -> {
+				sum.getAndAdd(card.getIntegerValue());
+			});
+		}
 		return sum.get();
 	}
 
