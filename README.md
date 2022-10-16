@@ -2,7 +2,7 @@
 
 Just a simple API to create a card deck, players with 5 cards each and a endpoint to know who is the winner of the match or if its a draw.
 
-### Create a shuffled deck:
+### 1 - Create a shuffled deck:
 
 HTTP GET 
 
@@ -174,3 +174,10 @@ Body:
 }
 ]
 ```
+## 4 - Get the winners score
+
+HTTP GET
+
+URL: `/api/player/score`
+
+
