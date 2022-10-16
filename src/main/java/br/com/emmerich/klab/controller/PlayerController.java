@@ -27,7 +27,7 @@ public class PlayerController {
 		return playerService.getWinnerPlayer(players);
 	}
 
-	@GetMapping
+	@GetMapping("/score")
 	public List<ScoreData> getWinners() {
 		return playerService.getAllWinners();
 	}
