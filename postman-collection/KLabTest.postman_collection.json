@@ -76,6 +76,26 @@
 			"response": []
 		},
 		{
+			"name": "Scores",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/player",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create Player 1 Deck",
 			"request": {
 				"method": "POST",

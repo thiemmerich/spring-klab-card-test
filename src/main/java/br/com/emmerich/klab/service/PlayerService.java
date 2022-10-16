@@ -1,6 +1,7 @@
 package br.com.emmerich.klab.service;
 
 import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,12 +14,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import br.com.emmerich.klab.model.Player;
+import br.com.emmerich.klab.model.ScoreData;
+import br.com.emmerich.klab.repository.ScoreRepository;
 import br.com.emmerich.klab.response.MatchResult;
 
 @Service
 public class PlayerService {
 
 	private static final Logger LOG = LoggerFactory.getLogger(PlayerService.class);
+	private final ScoreRepository scoreRepository;
+
+	public PlayerService(ScoreRepository scoreRepository) {
+		this.scoreRepository = scoreRepository;
+	}
 
 	/**
 	 * Searching for the winner, the method returns an array of players with 1 or n
@@ -44,6 +52,8 @@ public class PlayerService {
 			players = players.stream().filter(player -> player.deckSum().equals(winner)).collect(Collectors.toList());
 			result.setResult("Winner: " + players.get(0).getName());
 			result.setPlayers(players);
+
+			persistPlayer(players.get(0));
 		}
 
 		return result;
@@ -80,5 +90,23 @@ public class PlayerService {
 		});
 
 		return (index.get() > 1);
+	}
+
+	/**
+	 * Persist the player who won to the database
+	 * 
+	 * @param winner
+	 */
+	private void persistPlayer(Player winner) {
+		scoreRepository.save(new ScoreData(null, winner.getName(), winner.deckSum(), new Date()));
+	}
+
+	/**
+	 * Searching for the winners stored on the database
+	 * 
+	 * @return
+	 */
+	public List<ScoreData> getAllWinners() {
+		return scoreRepository.findAll();
 	}
 }
