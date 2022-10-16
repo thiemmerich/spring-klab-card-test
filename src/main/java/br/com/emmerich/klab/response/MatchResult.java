@@ -1,6 +1,8 @@
-package br.com.emmerich.klab.model;
+package br.com.emmerich.klab.response;
 
 import java.util.List;
+
+import br.com.emmerich.klab.model.Player;
 
 public class MatchResult {
 

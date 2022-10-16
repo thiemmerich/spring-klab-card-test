@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.emmerich.klab.model.MatchResult;
 import br.com.emmerich.klab.model.Player;
+import br.com.emmerich.klab.response.MatchResult;
 import br.com.emmerich.klab.service.PlayerService;
 
 @RestController

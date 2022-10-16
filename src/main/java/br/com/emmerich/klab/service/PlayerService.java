@@ -12,8 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import br.com.emmerich.klab.model.MatchResult;
 import br.com.emmerich.klab.model.Player;
+import br.com.emmerich.klab.response.MatchResult;
 
 @Service
 public class PlayerService {
